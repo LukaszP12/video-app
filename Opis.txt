@@ -1,0 +1,9 @@
+Wypo¿yczalnia kaset video: 
+
+1. Mo¿liwoœci API: 
+	a)dodawanie
+	b)pobieranie
+	c)pobieranie wszystkich 
+	d)modyfikowanie
+	e)usuwane kaset video 
+2. Komunikacja z baz¹ danych tak, aby by³y mo¿liwe do wykonania wszystkie operacje 
