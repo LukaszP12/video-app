@@ -15,7 +15,7 @@ public class VideoCassetteManager {
 
     private VideoCassetteRepo videoCassetteRepo;
 
-    @Autowired
+    @Autowired //wstrzykiwanie klasy video app repository
     public VideoCassetteManager(VideoCassetteRepo videoCassetteRepo) {
         this.videoCassetteRepo = videoCassetteRepo;
     }
@@ -26,7 +26,7 @@ public class VideoCassetteManager {
 
     public Iterable<VideoCassette> findAll() {
         return videoCassetteRepo.findAll();
-    }
+    } // iterable czyli element po których da się iterować
 
     public VideoCassette save(VideoCassette videoCassette) {
         return videoCassetteRepo.save(videoCassette);
@@ -36,6 +36,7 @@ public class VideoCassetteManager {
         videoCassetteRepo.deleteById(id);
     }
 
+    //na starcie aplikacji będą już dwa elementy w bazie danych
     @EventListener(ApplicationReadyEvent.class)
     public void fillDB() {
         save(new VideoCassette(1L,"Titanic", LocalDate.of(1995, 1,1)));
